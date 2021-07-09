@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Numbers List</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 130px;
+		}
+		.div2 {
+		
+			padding: 30px 50px;
+			width: 50%;
+		}
+		.p {
+			font-weight: 400;
+		}
+
+	</style>
+</head>
+<body class="body">
+	 <div class="div2">
+    <div class="container">
+      <p class="lead p"  id="num"></p>
+    </div>
+   </div>
+ <script type="text/javascript">
+       var doubleNumber = (value) => {
+   	      return value*2;
+   	    }
+        const numbers = [375, 40, 12, 1, 54, 25, 10, 8];
+
+
+        var  newNumbers=numbers.map(doubleNumber);
+
+        newNumbers.sort(function(a, b){return b-a});
+        document.getElementById('num').innerHTML=`The original Numbers  :${numbers} <br><br>Doubled Numbers in descending order : ${newNumbers}`;
+ </script>
+</body>
+</html>

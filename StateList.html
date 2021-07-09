@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+
+	li > div{
+		display: none;
+	}
+	.Active > div{
+		display: block;
+	}
+	body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 130px;
+		}
+		.div2 {
+		
+			padding: 30px 50px;
+			width: 30%;
+			text-align: center;
+		}
+		ul li {
+            background: #cce5ff;
+            margin: 5px;
+	</style>
+</head>
+<body class="bd">
+  <div class="div2" id="stateListWrapper">
+    <div class="list-group">
+     <ul class="list-group"id="stateList" onclick='stateSelected(event)'>
+        <li class="list-group-item">Kerala<div>Thiruvanatapuram</div></li>
+        <li class="list-group-item">Karnataka<div>Bengaluru</div></li>
+        <li class="list-group-item">AndhraPradesh<div>Amaravathi</div></li>
+        <li class="list-group-item">Assam<div>Dispur</div></li>
+        <li class="list-group-item">Bihar<div>Patna</div></li>
+     </ul>
+   </div>
+	<script type="text/javascript">
+		function stateSelected(event){
+			var x = event.target;
+			x.classList.toggle("Active");
+		}
+</script>
+</body>
+</html>
